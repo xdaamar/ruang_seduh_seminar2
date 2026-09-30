@@ -159,10 +159,17 @@
       <div class="container">
         <div class="about-card fade-in-on-scroll">
           
-          <!-- Ceramic Wax Stamp -->
-          <div class="about-stamp">
-            <i class="ph ph-coffee"></i>
-            <span>ESTD 2024</span>
+          <!-- Ceramic Wax Stamp with Creative Aroma Steam -->
+          <div class="about-stamp-container">
+            <div class="steam-wave-wrapper" aria-hidden="true">
+              <span class="steam-particle steam-p1"></span>
+              <span class="steam-particle steam-p2"></span>
+              <span class="steam-particle steam-p3"></span>
+            </div>
+            <div class="about-stamp">
+              <i class="ph ph-coffee"></i>
+              <span>ESTD 2024</span>
+            </div>
           </div>
 
           <span class="text-overline">
@@ -172,6 +179,32 @@
           <blockquote class="about-quote">
             “Lebih dari sekadar tempat ngopi, Ruang Seduh dirancang sebagai ruang yang nyaman bagi ide dan obrolan untuk tumbuh bersama.”
           </blockquote>
+
+          <!-- Mobile Tactile Principle Cards (Horizontal Snap Track) -->
+          <div class="about-pillars-track">
+            <div class="about-pillar-chip">
+              <div class="pillar-icon"><i class="ph ph-scales"></i></div>
+              <div class="pillar-info">
+                <strong>Slow Extraction</strong>
+                <p>Gramatur presisi &amp; suhu 92°C</p>
+              </div>
+            </div>
+            <div class="about-pillar-chip">
+              <div class="pillar-icon"><i class="ph ph-plant"></i></div>
+              <div class="pillar-info">
+                <strong>Etika Biji</strong>
+                <p>100% Single Origin petani lokal</p>
+              </div>
+            </div>
+            <div class="about-pillar-chip">
+              <div class="pillar-icon"><i class="ph ph-vinyl"></i></div>
+              <div class="pillar-info">
+                <strong>Sanctuary Ambient</strong>
+                <p>Lo-fi santai tanpa distraksi</p>
+              </div>
+            </div>
+          </div>
+
           <div class="about-divider"></div>
         </div>
       </div>
@@ -225,7 +258,10 @@
                 </div>
                 <h3 class="category-title">Signature Coffee</h3>
               </div>
-              <span class="badge badge-terracotta">Racikan Khas</span>
+              <div class="category-actions-wrap">
+                <span class="badge badge-terracotta">Racikan Khas</span>
+                <span class="mobile-swipe-badge"><i class="ph ph-arrows-horizontal"></i> Geser</span>
+              </div>
             </div>
 
             <div class="menu-grid">
@@ -385,6 +421,12 @@
                 </div>
               </article>
             </div>
+
+            <!-- Mobile Horizontal Swipe Indicator -->
+            <div class="mobile-scroll-indicator" aria-hidden="true">
+              <div class="scroll-track"><div class="scroll-thumb"></div></div>
+              <span class="scroll-hint-text"><i class="ph ph-hand-swipe-left"></i> Geser ke samping untuk menu lainnya</span>
+            </div>
           </div>
 
           <!-- Category 2: Non-Coffee & Artisan Tea -->
@@ -396,7 +438,10 @@
                 </div>
                 <h3 class="category-title">Non-Coffee &amp; Artisan Tea</h3>
               </div>
-              <span class="badge badge-amber">Herbal &amp; Teh Murni</span>
+              <div class="category-actions-wrap">
+                <span class="badge badge-amber">Herbal &amp; Teh Murni</span>
+                <span class="mobile-swipe-badge"><i class="ph ph-arrows-horizontal"></i> Geser</span>
+              </div>
             </div>
 
             <div class="menu-grid">
@@ -535,6 +580,12 @@
                 </div>
               </article>
             </div>
+
+            <!-- Mobile Horizontal Swipe Indicator -->
+            <div class="mobile-scroll-indicator" aria-hidden="true">
+              <div class="scroll-track"><div class="scroll-thumb"></div></div>
+              <span class="scroll-hint-text"><i class="ph ph-hand-swipe-left"></i> Geser ke samping untuk menu lainnya</span>
+            </div>
           </div>
 
           <!-- Category 3: Pastry & Bites -->
@@ -546,7 +597,10 @@
                 </div>
                 <h3 class="category-title">Pastry &amp; Bites</h3>
               </div>
-              <span class="badge badge-terracotta">Dipanggang Segar Setiap Pagi</span>
+              <div class="category-actions-wrap">
+                <span class="badge badge-terracotta">Dipanggang Segar Setiap Pagi</span>
+                <span class="mobile-swipe-badge"><i class="ph ph-arrows-horizontal"></i> Geser</span>
+              </div>
             </div>
 
             <div class="menu-grid">
@@ -684,6 +738,12 @@
                 </div>
               </article>
             </div>
+
+            <!-- Mobile Horizontal Swipe Indicator -->
+            <div class="mobile-scroll-indicator" aria-hidden="true">
+              <div class="scroll-track"><div class="scroll-thumb"></div></div>
+              <span class="scroll-hint-text"><i class="ph ph-hand-swipe-left"></i> Geser ke samping untuk menu lainnya</span>
+            </div>
           </div>
 
         </div>
@@ -707,7 +767,19 @@
           </p>
         </div>
 
-        <div class="space-grid">
+        <!-- Mobile Space Switcher Pills -->
+        <div class="space-mobile-switcher fade-in-on-scroll" role="tablist" aria-label="Pilih Suasana Ruang">
+          <button type="button" class="space-switch-btn active" data-space-index="0" role="tab" aria-selected="true">
+            <i class="ph ph-laptop"></i>
+            <span>Ruang Kreasi (Work)</span>
+          </button>
+          <button type="button" class="space-switch-btn" data-space-index="1" role="tab" aria-selected="false">
+            <i class="ph ph-chats-circle"></i>
+            <span>Ruang Temu (Social)</span>
+          </button>
+        </div>
+
+        <div class="space-grid" id="space-grid">
           
           <!-- Column 1: For Your Creation -->
           <article class="space-card fade-in-on-scroll">
@@ -783,6 +855,12 @@
             </div>
           </article>
 
+        </div>
+
+        <!-- Mobile Space Page Indicators -->
+        <div class="space-mobile-dots" aria-hidden="true">
+          <span class="space-dot active" data-space-index="0"></span>
+          <span class="space-dot" data-space-index="1"></span>
         </div>
       </div>
     </section>
@@ -985,7 +1063,82 @@
   </aside>
 
   <!-- =========================================================
-       9. Toast Notification for Copy Address
+       10. Interactive Tasting Notes Bottom-Sheet Modal
+       ========================================================= -->
+  <div class="tasting-modal-overlay" id="tasting-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+    <div class="tasting-sheet-card">
+      <div class="sheet-drag-handle"></div>
+      <button type="button" class="sheet-close-btn" id="sheet-close-btn" aria-label="Tutup detail modal">
+        <i class="ph ph-x"></i>
+      </button>
+
+      <div class="sheet-content">
+        <div class="sheet-hero">
+          <img src="assets/images/menu/cold-brew.jpg" alt="" class="sheet-img" id="sheet-img">
+          <div class="sheet-badge-overlay" id="sheet-badge">Artisan Choice</div>
+        </div>
+
+        <div class="sheet-body">
+          <div class="sheet-header-row">
+            <div>
+              <span class="sheet-category-label" id="sheet-category">Signature Brew</span>
+              <h3 class="sheet-title font-serif" id="sheet-title">Seduh Dingin Nusantara</h3>
+            </div>
+            <div class="sheet-price" id="sheet-price">Rp 32.000</div>
+          </div>
+
+          <p class="sheet-desc" id="sheet-desc">
+            Cold brew 18 jam dengan sentuhan aroma jeruk lokal dan keasaman manis madu hutan liar.
+          </p>
+
+          <!-- Flavor profile pills -->
+          <div class="sheet-flavors-wrap">
+            <span class="sheet-section-label">Aroma &amp; Tasting Notes:</span>
+            <div class="sheet-flavors" id="sheet-flavors">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Cupping specs grid -->
+          <div class="sheet-cupping-box">
+            <h4 class="sheet-cupping-title">
+              <i class="ph ph-certificate"></i>
+              <span>Profil Cupping &amp; Parameter Seduh</span>
+            </h4>
+            <div class="cupping-metrics-grid">
+              <div class="cupping-metric-item">
+                <span class="metric-label">Metode Ekstraksi</span>
+                <span class="metric-val" id="sheet-method">18h Cold Drip</span>
+              </div>
+              <div class="cupping-metric-item">
+                <span class="metric-label">Suhu Penyajian</span>
+                <span class="metric-val" id="sheet-temp">4°C (Chilled)</span>
+              </div>
+              <div class="cupping-metric-item">
+                <span class="metric-label">Profil Rasa</span>
+                <span class="metric-val" id="sheet-character">Crisp &amp; Balanced</span>
+              </div>
+              <div class="cupping-metric-item">
+                <span class="metric-label">Intensitas</span>
+                <span class="metric-val" id="sheet-intensity">Medium Body</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct Order Action -->
+          <div class="sheet-actions">
+            <a href="https://wa.me/6281234567890?text=Halo%20Ruang%20Seduh,%20saya%20ingin%20tanya%20menu" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="sheet-wa-btn" style="width: 100%;">
+              <i class="ph-fill ph-whatsapp-logo"></i>
+              <span>Tanya / Pesan Menu Ini via Barista</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       11. Toast Notification for Copy Address
        ========================================================= -->
   <div class="toast-notification" id="copy-toast" role="alert" aria-live="polite">
     <i class="ph ph-check-circle toast-icon"></i>
