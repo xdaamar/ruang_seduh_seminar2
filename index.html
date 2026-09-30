@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruang Seduh — Coffee • Conversation • Creation</title>
+  <meta name="description" content="Ruang Seduh — Sebuah sudut tenang di Senopati untuk merayakan aroma kopi artisan, obrolan hangat, dan lahirnya karya-karya bermakna.">
+  
+  <!-- Favicon / Brand Icon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+
+  <!-- Google Fonts: Playfair Display (Serif) & Plus Jakarta Sans (Sans-Serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- =========================================================
+       1. Smart Navigation (Hide-on-Scroll Header)
+       ========================================================= -->
+  <header class="smart-header" id="smart-header">
+    <div class="container header-container">
+      
+      <!-- Brand Logo -->
+      <a href="#hero" class="brand-link" aria-label="Ruang Seduh Home">
+        <img src="assets/images/logo.svg" alt="Ruang Seduh Logo" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-desktop" aria-label="Navigasi Utama">
+        <a href="#tentang-kami" class="nav-link">Tentang Kami</a>
+        <a href="#menu" class="nav-link">Menu</a>
+        <a href="#the-space" class="nav-link">The Space</a>
+        <a href="#lokasi-kontak" class="nav-link">Lokasi</a>
+      </nav>
+
+      <!-- Header CTA & Mobile Hamburger -->
+      <div class="header-actions">
+        <a href="#lokasi-kontak" class="btn btn-primary header-cta">Kunjungi Kami</a>
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Buka Menu Navigasi" aria-expanded="false">
+          <svg class="hamburger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+      <a href="#tentang-kami" class="mobile-nav-link">Tentang Kami</a>
+      <a href="#menu" class="mobile-nav-link">Menu Kami</a>
+      <a href="#the-space" class="mobile-nav-link">The Space</a>
+      <a href="#lokasi-kontak" class="mobile-nav-link">Lokasi & Kontak</a>
+      <div style="padding-top: 0.5rem;">
+        <a href="#menu" class="btn btn-primary" style="width: 100%;">Lihat Menu</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================
+         2. Hero Section (Ken Burns Zoom Visual & Call to Action)
+         ========================================================= -->
+    <section class="hero-section" id="hero">
+      <div class="hero-background-wrapper">
+        <img src="assets/images/hero-bg.png" alt="Interior hangat Ruang Seduh dengan meja kayu oak dan sinar matahari" class="hero-background-img">
+      </div>
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-content fade-in-on-scroll">
+        <!-- Floating Live Status Badge -->
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          <span>Buka Setiap Hari: 08:00 – 22:00 WIB</span>
+        </div>
+
+        <h1 class="hero-headline">Ruang Seduh</h1>
+        <p class="hero-tagline">Coffee • Conversation • Creation</p>
+        <p class="hero-description">
+          Sebuah sudut tenang untuk merayakan aroma kopi artisan, obrolan hangat, dan lahirnya karya-karya bermakna di tengah dinamika kota.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#menu" class="btn btn-primary">
+            <span>Lihat Menu</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="#the-space" class="btn btn-secondary">Eksplorasi Ruang</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         3. About Us Section (Minimalist Editorial Statement)
+         ========================================================= -->
+    <section class="section about-section" id="tentang-kami">
+      <div class="container">
+        <div class="about-card fade-in-on-scroll">
+          <span class="text-overline">Filosofi Kami</span>
+          <div class="quote-mark">“</div>
+          <blockquote class="about-quote">
+            Lebih dari sekadar tempat ngopi, Ruang Seduh dirancang sebagai ruang yang nyaman bagi ide dan obrolan untuk tumbuh bersama.
+          </blockquote>
+          <div class="about-divider"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         4. Our Menu Section (3 Categories, Grid, Rounded Thumbnails)
+         ========================================================= -->
+    <section class="section section-dim" id="menu">
+      <div class="container">
+        
+        <div class="section-header fade-in-on-scroll">
+          <span class="text-overline">Racikan Artisan & Bahan Pilihan</span>
+          <h2 class="section-title">Katalog Seduhan & Kudapan</h2>
+          <p class="section-desc">
+            Biji kopi bersumber etis dan bahan segar lokal, diolah dengan ketelitian tinggi untuk menemani setiap jeda berharga Anda.
+          </p>
+        </div>
+
+        <div class="menu-categories">
+          
+          <!-- Category 1: Signature Coffee -->
+          <div class="menu-category-group fade-in-on-scroll">
+            <div class="category-header">
+              <div class="category-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                  <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                  <line x1="6" y1="1" x2="6" y2="4"></line>
+                  <line x1="10" y1="1" x2="10" y2="4"></line>
+                  <line x1="14" y1="1" x2="14" y2="4"></line>
+                </svg>
+              </div>
+              <h3 class="category-title">Signature Coffee</h3>
+            </div>
+
+            <div class="menu-grid">
+              <!-- Item 1 -->
+              <article class="menu-card">
+                <div>
+                  <div class="menu-card-top">
+                    <div class="menu-thumb-wrapper">
+                      <img src="assets/images/menu/cold-brew.jpg" alt="Seduh Dingin Nusantara" class="menu-thumb" loading="lazy">
+                    </div>
+                    <div class="menu-card-info">
+                      <div class="menu-card-meta">
+                        <span class="badge badge-terracotta">Favorite</span>
+                        <span class="menu-price">Rp 32.000</span>
+                      </div>
+                      <h4 class="menu-item-name">Seduh Dingin Nusantara</h4>
+                    </div>
+                  </div>
+                  <p class="menu-item-desc">
+                    Cold brew 18 jam dengan sentuhan aroma jeruk lokal dan keasaman manis madu hutan.
+                  </p>
+                </div>
+                <div class="menu-card-footer">
+                  <span>❄️ Dingin • Body Medium</span>
+                </div>
+              </article>
+
+              <!-- Item 2 -->
+              <article class="menu-card">
+                <div>
+                  <div class="menu-card-top">
+                    <div class="menu-thumb-wrapper">
+                      <img src="assets/images/menu/aren-latte.jpg" alt="Aren Melati Latte" class="menu-thumb" loading="lazy">
+                    </div>
+                    <div class="menu-card-info">
+                      <div class="menu-card-meta">
+                        <span class="badge badge-amber">Artisan</span>
+                        <span class="menu-price">Rp 35.000</span>
+                      </div>
+                      <h4 class="menu-item-name">Aren Melati Latte</h4>
+                    </div>
+                  </div>
+                  <p class="menu-item-desc">
+                    Espresso bold, susu oat creamy, lelehan gula aren organik, dan distilasi bunga melati segar.
+                  </p>
+                </div>
+                <div class="menu-card-footer">
+                  <span>🌸 Floral • Susu Oat Nabati</span>
+                </div>
+              </article>
+
+              <!-- Item 3 -->
+              <article class="menu-card">
+                <div>
+                  <div class="menu-card-top">
+                    <div class="menu-thumb-wrapper">
+                      <img src="assets/images/menu/v60-geisha.jpg" alt="V60 Geisha Anaerobic" class="menu-thumb" loading="lazy">
+                    </div>
+                    <div class="menu-card-info">
+                      <div class="menu-card-meta">
+                        <span class="badge badge-terracotta">Barista Choice</span>
+                        <span class="menu-price">Rp 45.000</span>
+                      </div>
+                      <h4 class="menu-item-name">V60 Geisha Anaerobic</h4>
+                    </div>
+                  </div>
+                  <p class="menu-item-desc">
+                    Manual brew V60 dengan profil aroma bergamot aromatik, manis buah peach, dan sentuhan jasmine.
+                  </p>
+                </div>
+                <div class="menu-card-footer">
+                  <span>🧪 Filter Seduh Lambat</span>
+                </div>
+              </article>
+
+              <!-- Item 4 -->
+              <article class="menu-card">
+                <div>
+                  <div class="menu-card-top">
+                    <div class="menu-thumb-wrapper">
+                      <img src="assets/images/menu/flat-white.jpg" alt="Flat White Cortado" class="menu-thumb" loading="lazy">
+                    </div>
+                    <div class="menu-card-info">
+                      <div class="menu-card-meta">
+                        <span class="badge badge-neutral">Classic</span>
+                        <span class="menu-price">Rp 28.000</span>
+                      </div>
+                      <h4 class="menu-item-name">Flat White Cortado</h4>
+                    </div>
+                  </div>
+                  <p class="menu-item-desc">
+                    Double shot ristretto seimbang diselimuti steamed velvety microfoam lembut dan kaya rasa.
+                  </p>
+                </div>
+                <div class="menu-card-footer">
+                  <span>☕ Intens • Velvety Microfoam</span>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Category 2: Non-Coffee & Artisan Tea -->
+          <div class="menu-category-group fade-in-on-scroll">
+            <div class="category-header">
+              <div class="category-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2a9 9 0 0 1 9 9c0 4.97-4.03 9-9 9a9 9 0 0 1-9-9c0-4.97 4.03-9 9-9z"></path>
+                  <path d="M12 2v18"></path>
+                  <path d="M12 7c2.5 0 4 1.5 4 4s-1.5 4-4 4"></path>
+                </svg>
+              </div>
+              <h3 class="category-title">Non-Coffee &amp; Artisan Tea</h3>
+            </div>
+
+            <div class="menu-grid">
+              <!-- Item 1 -->
+              <article class="menu-card">
+                <div>
+                  <div class="menu-card-top">
+                    <div class="menu-thumb-wrapper">
+                      <img src="assets/images/menu/chamomile-tea.jpg" alt="Tisane Chamomile & Wildflower" class="menu-thumb" loading="lazy">
+                    </div>
+                    <div class="menu-card-info">
+                      <div class="menu-card-meta">
+                        <span class="badge badge-neutral">Caffeine-Free</span>
+                        <span class="menu-price">Rp 28.000</span>
+                      </div>
+                      <h4 class="menu-item-name">Tisane Chamomile &amp; Wildflower</h4>
+                    </div>
+                  </div>
+                  <p class="menu-item-desc">
+                    Teh herbal menenangkan bebas kafein dari bunga liar kering pilihan dan helai chamomile utuh.
+                  </p>
+                </div>
+                <div class="menu-card-footer">
+                  <span>🌼 Relaksasi • Bebas Kafein</span>
+                </div>
+              </article>
+
+              <!-- Item 2 -->
+              <article class="menu-card">
+                <div>
+                  <div class="menu-card-top">
+                    <div class="menu-thumb-wrapper">
+                      <img src="assets/images/menu/matcha-uji.jpg" alt="Matcha Ceremonial Uji" class="menu-thumb" loading="lazy">
+                    </div>
+                    <div class="menu-card-info">
+                      <div class="menu-card-meta">
+                        <span class="badge badge-amber">Artisan</span>
+                        <span class="menu-price">Rp 38.000</span>
+                      </div>
+                      <h4 class="menu-item-name">Matcha Ceremonial Uji</h4>
+                    </div>
+                  </div>
+                  <p class="menu-item-desc">
+                    Matcha murni grade ceremonial asal Kyoto dipadukan susu almond lembut rendah gula.
+                  </p>
+                </div>
+                <div class="menu-card-footer">
+                  <span>🍵 Antioksidan • Umami Halus</span>
+                </div>
+              </article>
+
+              <!-- Item 3 -->
+              <article class="menu-card">
+                <div>
+                  <div class="menu-card-top">
+                    <div class="menu-thumb-wrapper">
+                      <img src="assets/images/menu/cacao-tabanan.jpg" alt="Cacao Fermentasi Tabanan" class="menu-thumb" loading="lazy">
+                    </div>
+                    <div class="menu-card-info">
+                      <div class="menu-card-meta">
+                        <span class="badge badge-terracotta">Single Origin</span>
+                        <span class="menu-price">Rp 34.000</span>
+                      </div>
+                      <h4 class="menu-item-name">Cacao Fermentasi Tabanan</h4>
+                    </div>
+                  </div>
+                  <p class="menu-item-desc">
+                    Cokelat asli Tabanan Bali 70% dengan infusi kayu manis hangat dan sirup kelapa murni.
+                  </p>
+                </div>
+                <div class="menu-card-footer">
+                  <span>🍫 Cacao Bali 70% • Hangat</span>
+                </div>
+              </article>
+
+              <!-- Item 4 -->
+              <article class="menu-card">
+                <div>
+                  <div class="menu-card-top">
+                    <div class="menu-thumb-wrapper">
+                      <img src="assets/images/menu/cascara-fizz.jpg" alt="Sparkling Cascara Fizz" class="menu-thumb" loading="lazy">
+                    </div>
+                    <div class="menu-card-info">
+                      <div class="menu-card-meta">
+                        <span class="badge badge-amber">Refreshing</span>
+                        <span class="menu-price">Rp 30.000</span>
+                      </div>
+                      <h4 class="menu-item-name">Sparkling Cascara Fizz</h4>
+                    </div>
+                  </div>
+                  <p class="menu-item-desc">
+                    Infusi kulit ceri kopi organik dengan sentuhan sparkling water alami dan perasan lemon segar.
+                  </p>
+                </div>
+                <div class="menu-card-footer">
+                  <span>🍋 Sparkling • Segar & Ringan</span>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Category 3: Pastry & Bites -->
+          <div class="menu-category-group fade-in-on-scroll">
+            <div class="category-header">
+              <div class="category-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                </svg>
+              </div>
+              <h3 class="category-title">Pastry &amp; Bites</h3>
+            </div>
+
+            <div class="menu-grid">
+              <!-- Item 1 -->
+              <article class="menu-card">
+                <div>
+                  <div class="menu-card-top">
+                    <div class="menu-thumb-wrapper">
+                      <img src="assets/images/menu/croissant.jpg" alt="Butter Croissant au Levain" class="menu-thumb" loading="lazy">
+                    </div>
+                    <div class="menu-card-info">
+                      <div class="menu-card-meta">
+                        <span class="badge badge-terracotta">Fresh Baked</span>
+                        <span class="menu-price">Rp 26.000</span>
+                      </div>
+                      <h4 class="menu-item-name">Butter Croissant au Levain</h4>
+                    </div>
+                  </div>
+                  <p class="menu-item-desc">
+                    Flaky pastry klasik Prancis beraroma mentega Prancis, dipanggang renyah segar setiap subuh.
+                  </p>
+                </div>
+                <div class="menu-card-footer">
+                  <span>🥐 Dipanggang Setiap 07:30 Pagi</span>
+                </div>
+              </article>
+
+              <!-- Item 2 -->
+              <article class="menu-card">
+                <div>
+                  <div class="menu-card-top">
+                    <div class="menu-thumb-wrapper">
+                      <img src="assets/images/menu/sourdough-salmon.jpg" alt="Sourdough & Smoked Salmon" class="menu-thumb" loading="lazy">
+                    </div>
+                    <div class="menu-card-info">
+                      <div class="menu-card-meta">
+                        <span class="badge badge-amber">Savory Pick</span>
+                        <span class="menu-price">Rp 48.000</span>
+                      </div>
+                      <h4 class="menu-item-name">Sourdough &amp; Smoked Salmon</h4>
+                    </div>
+                  </div>
+                  <p class="menu-item-desc">
+                    Roti sourdough fermentasi 36 jam, irisan salmon asap Norwegia, dill cream cheese, dan capers.
+                  </p>
+                </div>
+                <div class="menu-card-footer">
+                  <span>🥪 Makanan Utama Jeda Kerja</span>
+                </div>
+              </article>
+
+              <!-- Item 3 -->
+              <article class="menu-card">
+                <div>
+                  <div class="menu-card-top">
+                    <div class="menu-thumb-wrapper">
+                      <img src="assets/images/menu/banana-loaf.jpg" alt="Banana Walnut Loaf" class="menu-thumb" loading="lazy">
+                    </div>
+                    <div class="menu-card-info">
+                      <div class="menu-card-meta">
+                        <span class="badge badge-neutral">Comfort</span>
+                        <span class="menu-price">Rp 25.000</span>
+                      </div>
+                      <h4 class="menu-item-name">Banana Walnut Loaf</h4>
+                    </div>
+                  </div>
+                  <p class="menu-item-desc">
+                    Kue pisang lembap dengan rempah pala hangat, remah kacang kenari panggang, dan butter glaze.
+                  </p>
+                </div>
+                <div class="menu-card-footer">
+                  <span>🍌 Teman Sempurna Kopi Filter</span>
+                </div>
+              </article>
+
+              <!-- Item 4 (Internet image via link as instructed) -->
+              <article class="menu-card">
+                <div>
+                  <div class="menu-card-top">
+                    <div class="menu-thumb-wrapper">
+                      <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=300&q=80" alt="Canelé de Bordeaux" class="menu-thumb" loading="lazy">
+                    </div>
+                    <div class="menu-card-info">
+                      <div class="menu-card-meta">
+                        <span class="badge badge-terracotta">Pastry Artisan</span>
+                        <span class="menu-price">Rp 24.000</span>
+                      </div>
+                      <h4 class="menu-item-name">Canelé de Bordeaux</h4>
+                    </div>
+                  </div>
+                  <p class="menu-item-desc">
+                    Kulit karamel renyah dengan bagian dalam custard lembut kaya ekstrak vanila Madagaskar asli.
+                  </p>
+                </div>
+                <div class="menu-card-footer">
+                  <span>🍯 Manis Karamel Seimbang</span>
+                </div>
+              </article>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         5. The Space Section (2-Column Experience Grid)
+         ========================================================= -->
+    <section class="section" id="the-space">
+      <div class="container">
+        
+        <div class="section-header text-center fade-in-on-scroll">
+          <span class="text-overline">Pengalaman Ruang</span>
+          <h2 class="section-title">Dua Suasana, Satu Rumah</h2>
+          <p class="section-desc">
+            Dirancang secara sadar untuk mengakomodasi kebutuhan fokus berkarya maupun keleluasaan berbincang tanpa saling menginterupsi.
+          </p>
+        </div>
+
+        <div class="space-grid">
+          
+          <!-- Column 1: For Your Creation -->
+          <article class="space-card fade-in-on-scroll">
+            <div class="space-image-wrapper">
+              <img src="assets/images/space-creation.png" alt="Area kerja tenang Ruang Seduh dengan meja kayu oak dan colokan listrik" class="space-img" loading="lazy">
+              <span class="space-badge">Area Kerja &amp; Fokus</span>
+            </div>
+            <div class="space-body">
+              <div>
+                <h3 class="space-title">For Your Creation</h3>
+                <p class="space-text">
+                  Colokan di setiap meja &amp; Wi-Fi stabil (rata-rata 50Mbps) untuk deep work Anda.
+                </p>
+              </div>
+              <div class="space-features">
+                <div class="feature-item">
+                  <svg class="feature-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                  </svg>
+                  <span>Kursi Ergonomis</span>
+                </div>
+                <div class="feature-item">
+                  <svg class="feature-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                  </svg>
+                  <span>Colokan Tiap Meja</span>
+                </div>
+                <div class="feature-item">
+                  <svg class="feature-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                    <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                    <line x1="12" y1="20" x2="12.01" y2="20"></line>
+                  </svg>
+                  <span>Wi-Fi Stabil 50+ Mbps</span>
+                </div>
+                <div class="feature-item">
+                  <svg class="feature-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <line x1="23" y1="9" x2="17" y2="15"></line>
+                    <line x1="17" y1="9" x2="23" y2="15"></line>
+                  </svg>
+                  <span>Suasana Tenang &amp; Hening</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Column 2: For Your Conversations -->
+          <article class="space-card fade-in-on-scroll">
+            <div class="space-image-wrapper">
+              <img src="assets/images/space-conversation.png" alt="Teras semi-outdoor dengan tanaman tropis dan pot terakota" class="space-img" loading="lazy">
+              <span class="space-badge">Area Santai &amp; Temu Wicara</span>
+            </div>
+            <div class="space-body">
+              <div>
+                <h3 class="space-title">For Your Conversations</h3>
+                <p class="space-text">
+                  Sudut santai dengan musik lo-fi pelan, ruang yang pas untuk bertukar ide tanpa terdistraksi.
+                </p>
+              </div>
+              <div class="space-features">
+                <div class="feature-item">
+                  <svg class="feature-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                  <span>Teras Semi-Outdoor Hijau</span>
+                </div>
+                <div class="feature-item">
+                  <svg class="feature-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18V5l12-2v13"></path>
+                    <circle cx="6" cy="18" r="3"></circle>
+                    <circle cx="18" cy="16" r="3"></circle>
+                  </svg>
+                  <span>Musik Lo-Fi Pelan</span>
+                </div>
+                <div class="feature-item">
+                  <svg class="feature-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2a5 5 0 0 1 5 5v5a5 5 0 0 1-10 0V7a5 5 0 0 1 5-5z"></path>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
+                  <span>Pot Terakota Alami</span>
+                </div>
+                <div class="feature-item">
+                  <svg class="feature-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                  </svg>
+                  <span>Sofa &amp; Rattan Santai</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         6. Footer: Location & Contact Section (#lokasi-kontak)
+         ========================================================= -->
+    <section class="section location-section" id="lokasi-kontak">
+      <div class="container">
+        
+        <div class="section-header text-center fade-in-on-scroll">
+          <span class="text-overline">Temui Kami</span>
+          <h2 class="section-title">Kunjungi Ruang Seduh</h2>
+          <p class="section-desc">
+            Pintu kami senantiasa terbuka untuk seduhan pertama di pagi hari hingga obrolan penutup malam.
+          </p>
+        </div>
+
+        <div class="location-grid fade-in-on-scroll">
+          
+          <!-- Information & Interactive Action Buttons Card -->
+          <div class="info-card">
+            
+            <div class="info-details">
+              <!-- Address -->
+              <div class="info-row">
+                <div class="info-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div>
+                  <p class="info-label">Alamat Utama</p>
+                  <p class="info-value-title" id="store-address">
+                    Jl. Senopati No. 42, Kebayoran Baru, Jakarta Selatan, 12190
+                  </p>
+                </div>
+              </div>
+
+              <!-- Opening Hours -->
+              <div class="info-row">
+                <div class="info-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <p class="info-label">Jam Operasional</p>
+                  <p class="info-value-title">08:00 – 22:00 WIB</p>
+                  <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">Buka Setiap Hari (Senin – Minggu)</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Buttons Required by PRD -->
+            <div class="info-actions">
+              <div class="actions-row">
+                <!-- Button 1: Buka di Google Maps -->
+                <a href="https://maps.google.com/?q=Jl.+Senopati+No.+42,+Kebayoran+Baru,+Jakarta+Selatan" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="btn-google-maps">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+                    <line x1="8" y1="2" x2="8" y2="18"></line>
+                    <line x1="16" y1="6" x2="16" y2="22"></line>
+                  </svg>
+                  <span>Buka di Google Maps</span>
+                </a>
+
+                <!-- Button 3: Salin Alamat with Toast -->
+                <button type="button" class="btn btn-secondary" id="btn-copy-address">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <span>Salin Alamat</span>
+                </button>
+              </div>
+
+              <!-- Button 2: Hubungi WhatsApp -->
+              <a href="https://wa.me/6281234567890?text=Halo%20Ruang%20Seduh,%20saya%20ingin%20bertanya%20seputar%20tempat%20dan%20menu" target="_blank" rel="noopener noreferrer" class="btn btn-soft" id="btn-whatsapp">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.06 7.42C8.9 7.42 8.64 7.48 8.42 7.72C8.2 7.96 7.57 8.55 7.57 9.75C7.57 10.95 8.44 12.11 8.57 12.28C8.7 12.45 10.29 14.9 12.72 15.95C13.3 16.2 13.75 16.35 14.1 16.46C14.68 16.65 15.22 16.62 15.64 16.56C16.11 16.49 17.08 15.97 17.28 15.4C17.48 14.83 17.48 14.34 17.42 14.24C17.36 14.14 17.2 14.08 16.96 13.96C16.72 13.84 15.54 13.26 15.32 13.18C15.1 13.1 14.94 13.06 14.78 13.3C14.62 13.54 14.16 14.08 14.02 14.24C13.88 14.4 13.74 14.42 13.5 14.3C13.26 14.18 12.49 13.93 11.57 13.11C10.85 12.47 10.37 11.68 10.23 11.44C10.09 11.2 10.21 11.07 10.33 10.95C10.44 10.84 10.58 10.66 10.72 10.5C10.86 10.34 10.9 10.22 11 10.02C11.1 9.82 11.04 9.65 10.96 9.53C10.88 9.41 10.26 7.89 10 7.27C9.75 6.67 9.5 6.75 9.32 6.74C9.15 6.73 8.95 6.73 8.75 6.73L9.06 7.42Z"/>
+                </svg>
+                <span>Hubungi WhatsApp</span>
+              </a>
+
+              <!-- Fallback Selectable Text Required by PRD -->
+              <p class="fallback-text">
+                Atau simpan nomor kami: <span class="fallback-number">0812-3456-7890</span>
+              </p>
+            </div>
+
+            <!-- Social Media Links (Instagram & TikTok) -->
+            <div class="social-links-row">
+              <span class="social-label">Ikuti Cerita Kami:</span>
+              <div class="social-buttons">
+                <!-- Instagram -->
+                <a href="https://instagram.com/ruangseduh.id" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram Ruang Seduh">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                  <span>@ruangseduh.id</span>
+                </a>
+
+                <!-- TikTok -->
+                <a href="https://tiktok.com/@ruangseduh.life" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="TikTok Ruang Seduh">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .58.04.86.11V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.47V10.8a8.28 8.28 0 0 0 5.77 2.29V9.64a4.84 4.84 0 0 1-2-.52z"/>
+                  </svg>
+                  <span>@ruangseduh.life</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Visual Map Location Preview Card -->
+          <div class="map-visual-card">
+            <!-- Aesthetic Map Visual via Internet Link -->
+            <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=900&q=80" alt="Peta Lokasi Kawasan Senopati Kebayoran Baru" class="map-img" loading="lazy">
+            <div class="map-info-floating">
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <div style="color: var(--color-terracotta);">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="10" r="3"></circle>
+                    <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <p style="font-weight: 600; font-size: 0.95rem; color: var(--text-main);">Kebayoran Baru Sanctuary</p>
+                  <p style="font-size: 0.8rem; color: var(--text-muted);">Area parkir motor &amp; mobil luas tersedia</p>
+                </div>
+              </div>
+              <span class="badge badge-amber">5 Menit dari Stasiun MRT</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       7. Site Footer
+       ========================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Brand & Description -->
+        <div>
+          <h3 class="footer-col-title font-serif">Ruang Seduh</h3>
+          <p class="footer-text">
+            Ruang hening bagi peracik dan penikmat kopi artisan. Menyajikan seduhan lambat, dialog jujur, serta kehangatan biji kopi pilihan Nusantara dan mancanegara.
+          </p>
+        </div>
+
+        <!-- Schedule -->
+        <div>
+          <h4 class="footer-col-title" style="font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-main);">Waktu Seduh</h4>
+          <ul class="schedule-list">
+            <li class="schedule-item">
+              <span class="schedule-day">Senin – Jumat</span>
+              <span>08:00 – 22:00</span>
+            </li>
+            <li class="schedule-item">
+              <span class="schedule-day">Sabtu – Minggu</span>
+              <span>07:30 – 23:00</span>
+            </li>
+            <li class="schedule-item">
+              <span class="schedule-day">Slow Bar Tasting</span>
+              <span>15:00 – 19:00</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Space & Contact info -->
+        <div>
+          <h4 class="footer-col-title" style="font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-main);">Lokasi</h4>
+          <p class="footer-text" style="margin-bottom: 0.75rem;">
+            Jl. Senopati No. 42, Kebayoran Baru, Jakarta Selatan, 12190
+          </p>
+          <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.35rem 0.85rem; border-radius: var(--radius-full); background-color: var(--color-terracotta-light); font-size: 0.775rem; font-weight: 600; color: var(--color-terracotta);">
+            <span class="pulse-dot"></span>
+            <span>Bar Seduh Sedang Buka</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Ruang Seduh. All rights reserved. Slow coffee • Thoughtful space.</p>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#" style="color: var(--text-muted);">Privasi</a>
+          <a href="#" style="color: var(--text-muted);">Etika Biji Kopi</a>
+          <a href="#" style="color: var(--text-muted);">Komunitas</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       8. Toast Notification for Copy Address
+       ========================================================= -->
+  <div class="toast-notification" id="copy-toast" role="alert" aria-live="polite">
+    <svg class="toast-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+    </svg>
+    <span>Alamat tersalin!</span>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
