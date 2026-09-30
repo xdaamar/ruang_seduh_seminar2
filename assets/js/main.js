@@ -3,9 +3,10 @@
  * Features:
  *  1. Smart Navigation (Hide-on-Scroll header)
  *  2. Mobile Drawer Navigation toggle & click-outside dismissal
- *  3. Smooth Anchor Scrolling & Active Link Highlighting
- *  4. Copy Address to Clipboard with UI Toast Feedback
- *  5. Lightweight IntersectionObserver Scroll Fade-in
+ *  3. Interactive Menu Category Filtering (All, Coffee, Non-Coffee, Pastry)
+ *  4. Smooth Anchor Scrolling & Active Link Highlighting
+ *  5. Copy Address to Clipboard with UI Toast Feedback
+ *  6. Lightweight IntersectionObserver Scroll Fade-in
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -14,13 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
      ------------------------------------------------------------- */
   const header = document.getElementById('smart-header');
   let lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
-  const scrollThreshold = 10; // Minimum scroll delta before reacting
+  const scrollThreshold = 10;
 
   window.addEventListener('scroll', () => {
     const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
 
-    // Only apply hide/show after scrolling past header height
-    if (currentScrollY > 100) {
+    if (currentScrollY > 90) {
       if (currentScrollY > lastScrollY + scrollThreshold) {
         // Scrolling down -> Hide header
         header.classList.add('header-hidden');
@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
         header.classList.remove('header-hidden');
       }
     } else {
-      // Near top of page -> Always show
       header.classList.remove('header-hidden');
     }
 
@@ -48,32 +47,66 @@ document.addEventListener('DOMContentLoaded', () => {
       e.stopPropagation();
       const isOpen = mobileDrawer.classList.toggle('open');
       hamburgerBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      
+      const icon = hamburgerBtn.querySelector('i');
+      if (icon) {
+        icon.className = isOpen ? 'ph ph-x' : 'ph ph-list';
+      }
     });
 
-    // Close when clicking any nav link
     mobileLinks.forEach(link => {
       link.addEventListener('click', () => {
         mobileDrawer.classList.remove('open');
         hamburgerBtn.setAttribute('aria-expanded', 'false');
+        const icon = hamburgerBtn.querySelector('i');
+        if (icon) icon.className = 'ph ph-list';
       });
     });
 
-    // Close drawer when clicking outside
     document.addEventListener('click', (e) => {
       if (!mobileDrawer.contains(e.target) && !hamburgerBtn.contains(e.target)) {
         mobileDrawer.classList.remove('open');
         hamburgerBtn.setAttribute('aria-expanded', 'false');
+        const icon = hamburgerBtn.querySelector('i');
+        if (icon) icon.className = 'ph ph-list';
       }
     });
   }
 
   /* -------------------------------------------------------------
-     3. Smooth Scrolling & Active Nav Highlighting
+     3. Interactive Menu Category Filtering
+     ------------------------------------------------------------- */
+  const filterButtons = document.querySelectorAll('.menu-filter-btn');
+  const categoryGroups = document.querySelectorAll('.menu-category-group');
+
+  if (filterButtons.length && categoryGroups.length) {
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+
+        // Update active class on filter buttons
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Filter categories
+        categoryGroups.forEach(group => {
+          const category = group.getAttribute('data-category');
+          if (filter === 'all' || filter === category) {
+            group.classList.remove('hidden-category');
+          } else {
+            group.classList.add('hidden-category');
+          }
+        });
+      });
+    });
+  }
+
+  /* -------------------------------------------------------------
+     4. Smooth Scrolling & Active Nav Highlighting
      ------------------------------------------------------------- */
   const navLinks = document.querySelectorAll('.nav-link');
   const sections = document.querySelectorAll('section[id]');
 
-  // Smooth scroll handler for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const targetId = this.getAttribute('href');
@@ -89,13 +122,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-
-  // Highlight active link on scroll
-  const observerOptions = {
-    root: null,
-    rootMargin: '-20% 0px -60% 0px',
-    threshold: 0
-  };
 
   const navObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -117,12 +143,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }
     });
-  }, observerOptions);
+  }, {
+    rootMargin: '-20% 0px -60% 0px',
+    threshold: 0
+  });
 
   sections.forEach(section => navObserver.observe(section));
 
   /* -------------------------------------------------------------
-     4. Copy Address to Clipboard with UI Toast Feedback
+     5. Copy Address to Clipboard with UI Toast Feedback
      ------------------------------------------------------------- */
   const btnCopy = document.getElementById('btn-copy-address');
   const toast = document.getElementById('copy-toast');
@@ -138,7 +167,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (navigator.clipboard && window.isSecureContext) {
           await navigator.clipboard.writeText(textToCopy);
         } else {
-          // Fallback textarea method
           const tempInput = document.createElement('textarea');
           tempInput.value = textToCopy;
           tempInput.style.position = 'fixed';
@@ -149,7 +177,6 @@ document.addEventListener('DOMContentLoaded', () => {
           document.body.removeChild(tempInput);
         }
 
-        // Trigger toast UI
         clearTimeout(toastTimeout);
         toast.classList.add('show');
 
@@ -163,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* -------------------------------------------------------------
-     5. Elegant Light Scroll Fade-in Animation
+     6. Elegant Light Scroll Fade-in Animation
      ------------------------------------------------------------- */
   const fadeElements = document.querySelectorAll('.fade-in-on-scroll');
   if ('IntersectionObserver' in window) {
@@ -175,13 +202,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     }, {
-      rootMargin: '0px 0px -50px 0px',
+      rootMargin: '0px 0px -40px 0px',
       threshold: 0.1
     });
 
     fadeElements.forEach(el => fadeObserver.observe(el));
   } else {
-    // Fallback for older browsers
     fadeElements.forEach(el => el.classList.add('visible'));
   }
 });
